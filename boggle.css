@@ -1,0 +1,119 @@
+html { height: 100%; }
+body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    margin-top: 140px;
+    background-color: #30292F;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: helvetica;
+}
+.sidebar-header {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: #E5E5E5;
+    font-size: 40px;
+    font-family: helvetica;
+
+}
+.word{
+    text-align: center;
+    color: #E5E5E5;
+    line-height: 30px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.the-title{
+    color: #000;
+    font-family: helvetica;
+    margin: 0, auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.letter{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-right: 20px;
+    font-family: helvetica;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+    user-select: none;
+}
+.letter:last-of-type { margin-right: 0; }
+body section .letter:hover { background-color: #9D858D99; }
+
+
+.record{
+    height: 60px;
+    background-color: red;
+    width: 400px;
+    padding-top: 50px;
+    margin-left: auto;
+    display: flex;
+    position: absolute;
+    overflow: auto;
+}
+
+
+/* .letter : focus{
+    background-color: red;
+    color: red;
+} */
+
+
+section > div {
+    display: flex;
+}
+
+.board{
+    width: 460px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.timer{
+  color:#000;
+  font-size:20px;
+  text-align:center;
+  font-family: helvetica;
+  padding-top: 30px;
+}
+
+
+
+
+/* domino effect */
+
+section:nth-child(1) .letter {
+    animation: fade 1.2s linear 0s reverse; }
+section:nth-child(2) .letter {
+    animation: fade 1.2s linear 0.2s reverse; }
+section:nth-child(3) .letter {
+    animation: fade 1.2s linear 0.4s reverse; }
+section:nth-child(4) .letter {
+    animation: fade 1.2s linear 0.6s reverse; }
+
+
+@keyframes fade {
+  0% {background: rgba(0, 0, 0, 0.1); }
+  100% {background: rgba(0, 0, 0, 1); }
+}
