@@ -1,94 +1,166 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html>
 <head>
-    <link rel="stylesheet" type="text/css" href="boggle.css">
-    <meta charset="utf-8">
-    <title>Boggle</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="eventonicaPart1Classes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="jQuery-scripts.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="content">
-        <div class="the-title">
-            Boggle
-        </div>
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">eventonica</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#" class="nav-links">Events</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">About Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Contact Us</a>
+            </li>
+     
+        </ul>
+    </nav>
 
-        <div class="timer"> <span id="timer"></span></div>
-
-        <div class="board">
-            <section>
-                <div class="row1">
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="row2">
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="row3">
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="row4">
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-
-                    <div class="letter">
-                    </div>
-                </div>
-            </section>
-
+    <div class = "hero">
+        <h1>Event Recommender</h1>
+        <p>
+            Your ultimate event manager. Add events, users, and search through<br/>
+            them too.
+        </p>
+        <div class = "event-pic">
+            <img src= "concert.jpeg">
         </div>
     </div>
 
-    <div class="sidebar">
-        <div class="sidebar-header">Words So Far</div>
-        <div class="word"></div>
-    </div>
+    <div class = "usr-mgmt">
+    <h2>User Management</h2>
+        <h3>All Users</h3>
+        <ul id="all-users">
+            <!-- Use jQuery to display all Users here -->
+        </ul>
 
-    <script type="text/javascript" src="boggle.js"></script>
+        <h3>Add User</h3>
+        <form id="add-user">
+            <!-- <label>User ID:</label>
+            <input type="text"> -->
+            <br/>
+            <label>User name:</label>
+            <input type="text">
+            <br/>
+            <!-- Add more form fields here -->
+            <input type="submit">
+        </form>
+
+        <h3>Delete User</h3>
+        <form id="delete-user">
+            <label>User Name:</label>
+            <input type="text" id="delete-user-id">
+            <br/>
+            <input type="submit">
+        </form>
+    
+</div>
+
+
+    <br/>
+
+    <div class = "evnt-mngmnt">
+
+    <h2>Event Management</h2>
+        <h3>All Events</h3>
+        <ul id="all-events">
+            <!-- Use jQuery to display all Users here -->
+        </ul>
+       
+
+        <h3>Add Event</h3>
+        <form id="add-event">
+            <!-- <label>Event ID:</label>
+            <input type="text" id="add-event-id"> -->
+            <br/>
+            <label>Event Name:</label>
+            <input type="text" id="add-event-name"><br/>
+            <label>Event Date:</label>
+            <input type="text" id="add-event-date"><br/>
+            <label>Event Category:</label>
+            <input type="text" id="add-event-category"><br/>
+            <br/>
+            <!-- Add more form fields here -->
+            <input type="submit">
+        </form>
+
+    <div>
+        <h3>Delete Event</h3>
+        <form id="delete-event">
+            <label>Event Name:</label>
+            <input type="text" id="delete-event-id">
+            <br/>
+            <input type="submit">
+        </form>
+    </div>
+    </div>
+</div>
+
+<br/>
+
+<h2>Event Search and Save</h2>
+<div id="date-search">
+    <h3>Find Events by Date</h3>
+    <form id="date-search-form">
+        <label>Event date:</label>
+        <input type="text" id="date-search-id">
+        <br/>
+        <input type="submit">
+    </form>
+    <h4>Results:</h4>
+    <ol>
+        <!-- Use jQuery to add search results here-->
+    </ol>
+</div>
+
+<div id="category-search">
+    <h3>Find Events by Category</h3>
+    <form id="category-search-form">
+        <label>Event category:</label>
+        <input type="text" id="category-search-id">
+        <br/>
+        <input type="submit">
+    </form>
+    <h4>Results:</h4>
+    <ol>
+        <!-- Use jQuery to add search results here-->
+    </ol>
+</div>
+
+<div>
+    <h3>Save Event for User</h3>
+    <form id="save-user-event">
+        <label>Username:</label>
+        <input type="text" id="save-user-id">
+        <br/>
+        <label>Event Name:</label>
+        <input type="text" id="save-event-id">
+        <br/>
+        <input type="submit">
+    </form>
+</div>
+
+<script>
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+navBarToggle.addEventListener('click', function () {
+  mainNav.classList.toggle('active');
+});
+</script>
+
 </body>
 
 </html>

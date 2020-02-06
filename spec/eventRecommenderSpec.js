@@ -1,18 +1,11 @@
-# Eventonica
+describe("EventRecommender", () => {
+  const { EventRecommender, User, Event } = require('../eventonicaPart1Classes.js'); // Update with your class names and file name
+  let er; 
 
-This project is basically an event management site.
+  beforeEach(() => {
+    er = new EventRecommender();
+  });
 
-
-## Running the tests
-
-The test I used were Jasmine.
-
-### Break down into end to end tests
-
-There were a total of 5 tests
-
-Test 1: Adds a New Event to the System
-```
   describe("addEvent", () => {
     it("adds a new Event to the system", () => {
       er.addEvent("Anne Concert", "11/09/2020", "Music");
@@ -20,21 +13,15 @@ Test 1: Adds a New Event to the System
       expect(er.events[0].title).toEqual("Anne Concert"); // what are some other things you can test?
     });
   });
-  ```
 
-  Test 2: Adds a New User to the System
-```
- describe("addUser", () => {
+  describe("addUser", () => {
     it("adds a new User to the system", () => {
       er.addUser("Jennifer")
       expect(er.users.length).toEqual(1);
       expect(er.users[0].username).toEqual("Jennifer")
     });
   });
-  ```
 
-  Test 3: Adds an event to a user's personal event array
-```
   describe("saveUserEvent", () => {
     it("adds an event to a user's personal event array", () => {
       er.addEvent("Anne Concert", "11/09/2020", "Music");
@@ -45,11 +32,8 @@ Test 1: Adds a New Event to the System
       expect(er.users[0].savedEvents[0].title).toEqual("Anne Concert");
     });
   });
-  ```
 
-  Test 4: Removes a user from the system
-```
- describe("deleteUser", () => {
+  describe("deleteUser", () => {
     it("removes a User from the system", () => {
       er.addUser("Jennifer");
       expect(er.users.length).toEqual(1);
@@ -57,10 +41,7 @@ Test 1: Adds a New Event to the System
       expect(er.users.length).toEqual(0);
     });
   });
-  ```
 
-  Test 5: Removes event from the system
-```
   describe("deleteEvent", () => {
     it("removes the event from the system", () => {
       er.addEvent("Anne Concert");
@@ -69,16 +50,4 @@ Test 1: Adds a New Event to the System
       expect(er.events.length).toEqual(0);
     });
   });
-  ```
-
-### And coding style tests
-
-We need these tests to learn how testing works and also make sure the code works.
-
-
-## Built With
-
-* jQuery
-* HTML/CSS
-
-
+});

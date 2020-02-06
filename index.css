@@ -1,0 +1,223 @@
+h1{
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+}
+.hero{
+    position: relative;
+}
+.hero h1 {
+    position: absolute;
+    padding-top: 240px;
+    margin: 0;
+    padding-left: 50px;
+
+}
+.hero p {
+    position: absolute;
+    padding-top: 290px;
+    margin: 0;
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+    padding-left: 50px;
+    line-height: 25px;
+}
+.event-pic img{
+    width: 100%;
+    height: 560px;
+}
+
+h2{
+    font-family: 'Maven Pro', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+h3{
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+    padding-left: 50px;
+
+}
+h4{
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-left: 80px;
+}
+#all-users li{
+    padding-left: 70px;
+    padding-top: 10px;
+}
+#all-users{
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+}
+#all-users h3{
+    padding-top: 20px;
+}
+#all-events li{
+    padding-bottom: 20px;
+}
+.usr-mgmt h3{
+    padding-top: 20px;
+}
+#add-user{
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+#delete-user{
+    padding-left: 70px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+label{
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+}
+li{
+    font-family: 'Maven Pro', sans-serif;
+    color: #FFFFFF;
+}
+.evnt-mngmnt{
+    background-color: #fff;
+}
+.evnt-mngmnt h2{
+    color: #191E25;
+}
+.evnt-mngmnt h3{
+    color: #191E25;
+    padding-bottom: 25px;
+}
+#all-events li{
+    color: #191E25;
+    padding-left: 70px;
+}
+#add-event label{
+    color: #191E25;
+}
+#add-event {
+    padding-left: 70px !important;
+    padding-bottom: 20px;
+
+}
+#delete-event label{
+    color: #191E25;
+}
+#delete-event {
+    padding-left: 70px !important;
+    padding-bottom: 20px;
+
+}
+
+
+#date-search-form{
+    padding-left: 60px;
+    padding-top: 20px;
+}
+#category-search-form{
+    padding-left: 60px;
+    padding-top: 10px;
+}
+#category-search h3{
+    padding-top: 30px;
+}
+
+#save-user-event{
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+
+/* for the navbar */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #191E25;
+}
+
+.navbar {
+    font-size: 18px;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: #191E25;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    font-family: 'Maven Pro', sans-serif;
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
